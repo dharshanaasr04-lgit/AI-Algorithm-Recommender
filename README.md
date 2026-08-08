@@ -1,4 +1,4 @@
-# 🤖 AI Algorithm Recommender
+# AI Algorithm Recommender
 
 ### Machine Learning Based Algorithm Selection System
 
@@ -8,7 +8,7 @@ The system uses a trained Machine Learning classification model to analyze proje
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 Choosing the right Machine Learning algorithm can be difficult, especially for beginners.
 
@@ -26,7 +26,7 @@ This project provides an easy-to-use solution where users enter their project de
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 
 The main objectives of this project are:
 
@@ -39,7 +39,7 @@ The main objectives of this project are:
 
 ---
 
-## ✨ Features
+##  Features
 
 - 🔹 Classification, Regression and Clustering support
 - 🔹 Dataset size selection
@@ -56,7 +56,7 @@ The main objectives of this project are:
 
 ---
 
-## 🧠 Algorithms Included
+##  Algorithms Included
 
 The system can recommend the following algorithms:
 
@@ -71,7 +71,7 @@ The system can recommend the following algorithms:
 
 ---
 
-## 📊 Dataset
+##  Dataset
 
 The training dataset contains information about different Machine Learning project requirements.
 
@@ -92,7 +92,7 @@ The current training dataset contains **240 records**.
 
 ---
 
-## 🤖 Machine Learning Model
+##  Machine Learning Model
 
 The project uses a supervised Machine Learning classification approach.
 
@@ -116,7 +116,7 @@ Confidence Calculation
 Recommendation
 ---
 
-## 📈 Model Performance
+##  Model Performance
 
 The trained Machine Learning model was evaluated using a separate testing dataset.
 
@@ -135,7 +135,7 @@ The model achieved an accuracy of 83.33% on the testing dataset.
 
 ---
 
-## 🖥️ User Interface
+##  User Interface
 
 The application is developed using Streamlit and provides a simple interface for entering project requirements.
 
@@ -157,7 +157,7 @@ After clicking **Recommend Algorithm**, the application displays:
 - Reason for recommendation
 - Algorithm Description
 
-### 📸 Application Screenshots
+###  Application Screenshots
 
 #### Main Interface
 
@@ -198,30 +198,3 @@ After clicking **Recommend Algorithm**, the application displays:
 
 ---
 
-## 📁 Project Structure
-
-```text
-AI-Algorithm-Recommender/
-│
-├── ai/
-│   ├── algorithm_recommender.pkl
-│   ├── data_check.py
-│   ├── generate_dataset.py
-│   ├── predict.py
-│   ├── preprocess.py
-│   ├── train_model.py
-│   └── training_data.csv
-│
-├── database/
-│   ├── queries.sql
-│   ├── sampledata.sql
-│   └── schema.sql
-│
-├── screenshots/
-│   ├── app-home.png
-│   └── recommendation-result.png
-│
-├── app.py
-├── requirements.txt
-├── .gitignore
-└── README.md
