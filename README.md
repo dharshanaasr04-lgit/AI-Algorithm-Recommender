@@ -114,3 +114,114 @@ Algorithm Prediction
 Confidence Calculation
     ↓
 Recommendation
+---
+
+## 📈 Model Performance
+
+The trained Machine Learning model was evaluated using a separate testing dataset.
+
+### Model Accuracy
+
+**83.33%**
+
+### Dataset Split
+
+- Total records: 240
+- Training records: 192
+- Testing records: 48
+- Processed features: 16
+
+The model achieved an accuracy of 83.33% on the testing dataset.
+
+---
+
+## 🖥️ User Interface
+
+The application is developed using Streamlit and provides a simple interface for entering project requirements.
+
+Users can select:
+
+- Problem Type
+- Dataset Size
+- Number of Features
+- Number of Records
+- Accuracy Priority
+- Speed Priority
+- Interpretability
+
+After clicking **Recommend Algorithm**, the application displays:
+
+- Recommended Algorithm
+- Model Confidence
+- Project details
+- Reason for recommendation
+- Algorithm Description
+
+### 📸 Application Screenshots
+
+#### Main Interface
+
+![AI Algorithm Recommender](screenshots/app-home.png)
+
+#### Recommendation Result
+
+![Recommendation Result](screenshots/recommendation-result.png)
+
+---
+
+## 🛠️ Technologies Used
+
+### Programming Language
+
+- Python
+
+### Machine Learning Libraries
+
+- Pandas
+- NumPy
+- Scikit-learn
+- Joblib
+
+### Web Application
+
+- Streamlit
+
+### Database
+
+- SQL
+
+### Development Tools
+
+- Visual Studio Code
+- Git
+- GitHub
+
+---
+
+## 📁 Project Structure
+
+```text
+AI-Algorithm-Recommender/
+│
+├── ai/
+│   ├── algorithm_recommender.pkl
+│   ├── data_check.py
+│   ├── generate_dataset.py
+│   ├── predict.py
+│   ├── preprocess.py
+│   ├── train_model.py
+│   └── training_data.csv
+│
+├── database/
+│   ├── queries.sql
+│   ├── sampledata.sql
+│   └── schema.sql
+│
+├── screenshots/
+│   ├── app-home.png
+│   └── recommendation-result.png
+│
+├── app.py
+├── requirements.txt
+├── .gitignore
+└── README.md
