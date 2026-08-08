@@ -1,28 +1,28 @@
 # 🤖 AI Algorithm Recommender
 
-An AI-powered machine learning application that recommends a suitable machine learning algorithm based on a project's dataset characteristics and requirements.
+### Machine Learning Based Algorithm Selection System
 
-The system analyzes factors such as problem type, dataset size, number of features, number of records, accuracy priority, speed priority, and interpretability, and then uses a trained machine learning model to recommend an algorithm.
+An AI-powered web application that recommends a suitable Machine Learning algorithm based on the characteristics and requirements of a user's dataset.
+
+The system uses a trained Machine Learning classification model to analyze project requirements and predict the most suitable algorithm.
 
 ---
 
 ## 📌 Project Overview
 
-Choosing the right machine learning algorithm can be difficult, especially for beginners.
+Choosing the right Machine Learning algorithm can be difficult, especially for beginners.
 
-Different algorithms work better for different types of problems and datasets.
+Different algorithms perform better depending on factors such as:
 
-The **AI Algorithm Recommender** simplifies this process by taking basic project requirements as input and predicting a suitable machine learning algorithm.
+- Problem type
+- Dataset size
+- Number of features
+- Number of records
+- Accuracy requirements
+- Speed requirements
+- Interpretability requirements
 
-The project uses:
-
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- Joblib
-- Streamlit
-- SQL
+This project provides an easy-to-use solution where users enter their project details and the trained Machine Learning model recommends a suitable algorithm.
 
 ---
 
@@ -30,46 +30,87 @@ The project uses:
 
 The main objectives of this project are:
 
-1. Understand the basic requirements of a machine learning project.
-2. Analyze dataset characteristics.
-3. Train a machine learning classification model.
-4. Recommend a suitable machine learning algorithm.
-5. Display the recommendation through a simple web interface.
-6. Help beginners understand different machine learning algorithms.
+1. To recommend suitable Machine Learning algorithms automatically.
+2. To help beginners understand algorithm selection.
+3. To use Machine Learning for algorithm recommendation.
+4. To provide a simple and user-friendly interface.
+5. To display the model's confidence for each recommendation.
+6. To explain why the selected algorithm is suitable.
 
 ---
 
 ## ✨ Features
 
-- 🤖 AI-based algorithm recommendation
-- 📊 Dataset characteristic analysis
-- 🧠 Machine learning model prediction
-- 📈 Model confidence score
-- 💡 Explanation of the recommendation
-- 📚 Algorithm guide
-- 🖥️ Interactive Streamlit web interface
-- 🗄️ SQL database files
-- 🔄 Reproducible training process
+- 🔹 Classification, Regression and Clustering support
+- 🔹 Dataset size selection
+- 🔹 Number of features selection
+- 🔹 Number of records selection
+- 🔹 Accuracy priority
+- 🔹 Speed priority
+- 🔹 Interpretability priority
+- 🔹 AI-based algorithm recommendation
+- 🔹 Model confidence percentage
+- 🔹 Algorithm description
+- 🔹 Simple Streamlit web interface
+- 🔹 Deployed online using Streamlit
 
 ---
 
-## 🧠 How the System Works
+## 🧠 Algorithms Included
 
-The system follows these steps:
+The system can recommend the following algorithms:
+
+- Random Forest
+- Decision Tree
+- Logistic Regression
+- Support Vector Machine (SVM)
+- Naive Bayes
+- K-Nearest Neighbors (KNN)
+- Linear Regression
+- K-Means
+
+---
+
+## 📊 Dataset
+
+The training dataset contains information about different Machine Learning project requirements.
+
+### Dataset Features
+
+| Feature | Description |
+|---|---|
+| problem_type | Classification, Regression or Clustering |
+| dataset_size | Small, Medium or Large |
+| num_features | Number of features |
+| num_records | Number of records |
+| accuracy_priority | Required accuracy level |
+| speed_priority | Required processing speed |
+| interpretability | Required model interpretability |
+| recommended_algorithm | Target algorithm |
+
+The current training dataset contains **240 records**.
+
+---
+
+## 🤖 Machine Learning Model
+
+The project uses a supervised Machine Learning classification approach.
+
+### Processing Steps
 
 ```text
-User enters project details
-          ↓
-Input validation
-          ↓
-Categorical data encoding
-          ↓
-Feature preprocessing
-          ↓
-Trained ML model
-          ↓
-Algorithm prediction
-          ↓
-Confidence calculation
-          ↓
-Recommendation displayed
+User Input
+    ↓
+Data Validation
+    ↓
+Categorical Feature Encoding
+    ↓
+Feature Processing
+    ↓
+Trained ML Model
+    ↓
+Algorithm Prediction
+    ↓
+Confidence Calculation
+    ↓
+Recommendation
