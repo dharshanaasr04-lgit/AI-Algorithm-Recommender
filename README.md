@@ -41,18 +41,18 @@ The main objectives of this project are:
 
 ##  Features
 
-- 🔹 Classification, Regression and Clustering support
-- 🔹 Dataset size selection
-- 🔹 Number of features selection
-- 🔹 Number of records selection
-- 🔹 Accuracy priority
-- 🔹 Speed priority
-- 🔹 Interpretability priority
-- 🔹 AI-based algorithm recommendation
-- 🔹 Model confidence percentage
-- 🔹 Algorithm description
-- 🔹 Simple Streamlit web interface
-- 🔹 Deployed online using Streamlit
+-  Classification, Regression and Clustering support
+-  Dataset size selection
+-  Number of features selection
+-  Number of records selection
+-  Accuracy priority
+-  Speed priority
+-  Interpretability priority
+-  AI-based algorithm recommendation
+-  Model confidence percentage
+-  Algorithm description
+-  Simple Streamlit web interface
+-  Deployed online using Streamlit
 
 ---
 
