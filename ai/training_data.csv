@@ -1,0 +1,241 @@
+problem_type,dataset_size,num_features,num_records,accuracy_priority,speed_priority,interpretability,recommended_algorithm
+Classification,Large,47,99818,High,Medium,Medium,Random Forest
+Classification,Medium,20,11224,High,Medium,Low,Random Forest
+Classification,Medium,23,11379,High,Low,Low,SVM
+Classification,Medium,22,6997,High,Low,Low,SVM
+Classification,Medium,15,4389,High,Medium,Low,SVM
+Classification,Small,6,1561,Medium,Medium,High,KNN
+Clustering,Large,21,80338,Medium,High,Medium,K-Means
+Classification,Medium,8,8000,Medium,High,High,Logistic Regression
+Classification,Medium,19,5750,High,Medium,Low,Random Forest
+Classification,Small,8,2336,Medium,High,Medium,Naive Bayes
+Classification,Medium,7,5456,Medium,High,High,Decision Tree
+Regression,Medium,9,7871,High,High,High,Linear Regression
+Classification,Medium,27,10305,High,Low,Low,SVM
+Classification,Small,9,1748,Medium,Medium,High,KNN
+Classification,Medium,26,8198,High,Medium,Low,SVM
+Clustering,Large,4,56224,Medium,High,Medium,K-Means
+Regression,Medium,10,6937,High,High,High,Linear Regression
+Classification,Large,32,28675,High,Medium,Low,Random Forest
+Classification,Small,4,937,Medium,Medium,High,KNN
+Classification,Small,15,3616,High,High,Medium,Naive Bayes
+Classification,Small,15,3694,High,High,Medium,Naive Bayes
+Classification,Medium,18,6796,High,Medium,Medium,Random Forest
+Clustering,Large,16,78532,Medium,Medium,Medium,K-Means
+Classification,Small,20,1846,Medium,High,High,Decision Tree
+Classification,Small,6,960,Medium,Medium,High,KNN
+Classification,Small,4,1540,Medium,Medium,High,KNN
+Classification,Medium,29,6654,High,Low,Low,Random Forest
+Regression,Small,6,2256,Medium,High,High,Linear Regression
+Clustering,Medium,11,12024,Medium,Medium,Medium,K-Means
+Classification,Small,3,1485,Medium,Medium,High,KNN
+Classification,Medium,23,4146,High,Medium,Low,SVM
+Clustering,Large,15,79942,Medium,High,Medium,K-Means
+Classification,Large,25,90697,High,Medium,Low,Random Forest
+Regression,Medium,5,8813,High,High,High,Linear Regression
+Classification,Large,38,48746,High,Medium,Low,Random Forest
+Classification,Small,14,2766,Medium,High,High,Logistic Regression
+Regression,Small,13,2494,Medium,High,High,Linear Regression
+Classification,Small,4,1496,High,High,High,Decision Tree
+Classification,Small,8,1360,Medium,High,High,Logistic Regression
+Classification,Small,8,1991,Medium,Medium,High,KNN
+Clustering,Large,12,28710,Medium,Medium,Medium,K-Means
+Classification,Small,13,2369,High,Low,Low,SVM
+Clustering,Large,25,57247,Medium,High,Medium,K-Means
+Classification,Medium,46,11482,High,Low,Medium,Random Forest
+Classification,Small,5,455,Medium,Medium,High,KNN
+Classification,Medium,5,10179,High,High,High,Logistic Regression
+Classification,Small,8,1984,Medium,Medium,High,KNN
+Classification,Medium,9,6417,Medium,High,High,Decision Tree
+Classification,Small,8,3605,High,High,Medium,Naive Bayes
+Classification,Medium,6,8147,Medium,High,High,Logistic Regression
+Regression,Small,5,785,High,High,High,Linear Regression
+Regression,Medium,9,3282,Medium,High,High,Linear Regression
+Regression,Medium,11,3986,Medium,High,High,Linear Regression
+Regression,Small,5,2283,High,High,High,Linear Regression
+Clustering,Large,18,72963,Medium,High,Medium,K-Means
+Regression,Small,4,1282,Medium,High,High,Linear Regression
+Classification,Medium,24,7246,High,Low,Low,SVM
+Clustering,Large,10,80597,Medium,High,Medium,K-Means
+Classification,Medium,3,3058,High,High,High,Logistic Regression
+Classification,Small,10,1988,Medium,High,Medium,Naive Bayes
+Classification,Small,23,506,High,Low,Low,SVM
+Classification,Small,3,3381,High,High,Medium,Naive Bayes
+Classification,Small,9,1751,Medium,High,Medium,Naive Bayes
+Classification,Small,13,2771,High,High,High,Logistic Regression
+Classification,Medium,27,3006,High,Medium,Low,SVM
+Classification,Small,5,1583,Medium,High,High,Logistic Regression
+Classification,Medium,23,6185,High,Medium,Low,SVM
+Classification,Small,15,942,High,High,High,Logistic Regression
+Classification,Medium,24,4269,High,Medium,Low,SVM
+Regression,Medium,3,6180,High,High,High,Linear Regression
+Classification,Small,5,477,Medium,Medium,High,KNN
+Classification,Small,26,2402,High,Low,Low,SVM
+Classification,Large,50,41643,High,Low,Low,Random Forest
+Classification,Small,9,3690,Medium,High,Medium,Naive Bayes
+Classification,Medium,11,10007,Medium,High,High,Logistic Regression
+Classification,Medium,3,5938,High,High,High,Logistic Regression
+Classification,Large,32,40379,High,Medium,Low,Random Forest
+Classification,Small,4,1340,Medium,High,High,Decision Tree
+Classification,Small,7,325,Medium,Medium,High,KNN
+Classification,Small,3,1930,Medium,Medium,High,KNN
+Classification,Medium,13,7920,High,Medium,Low,SVM
+Classification,Medium,4,7002,High,High,High,Logistic Regression
+Clustering,Large,3,45340,Medium,High,Medium,K-Means
+Regression,Small,12,1164,High,High,High,Linear Regression
+Classification,Small,14,4918,Medium,High,Medium,Naive Bayes
+Classification,Medium,15,7502,High,High,High,Decision Tree
+Classification,Medium,32,6169,High,Medium,Medium,Random Forest
+Classification,Small,5,1749,Medium,High,High,Decision Tree
+Classification,Large,19,89822,High,Medium,Medium,Random Forest
+Classification,Medium,4,7516,Medium,High,High,Decision Tree
+Clustering,Large,20,20273,Medium,Medium,Medium,K-Means
+Classification,Small,12,2285,High,High,Medium,Naive Bayes
+Classification,Small,10,1177,Medium,Medium,High,KNN
+Classification,Medium,3,5198,High,High,High,Decision Tree
+Classification,Small,7,3605,High,High,Medium,Naive Bayes
+Regression,Medium,6,8023,High,High,High,Linear Regression
+Classification,Small,4,1110,Medium,High,High,Logistic Regression
+Classification,Medium,14,5469,High,High,High,Decision Tree
+Classification,Small,7,441,Medium,Medium,High,KNN
+Classification,Small,12,1748,Medium,High,Medium,Naive Bayes
+Classification,Small,3,1762,High,High,High,Logistic Regression
+Classification,Small,4,4352,Medium,High,Medium,Naive Bayes
+Classification,Large,16,34662,High,Low,Low,Random Forest
+Clustering,Large,5,67976,Medium,Medium,Medium,K-Means
+Clustering,Large,5,86376,Medium,Medium,Medium,K-Means
+Clustering,Large,4,44451,Medium,Medium,Medium,K-Means
+Classification,Small,14,1852,High,High,Medium,Naive Bayes
+Classification,Medium,16,9506,High,Medium,Medium,Random Forest
+Classification,Medium,16,6535,High,Medium,Medium,Random Forest
+Classification,Medium,12,5426,High,High,High,Logistic Regression
+Classification,Medium,17,4046,Medium,High,High,Decision Tree
+Classification,Small,29,2831,High,Medium,Low,SVM
+Classification,Small,14,1117,High,Low,Low,SVM
+Classification,Small,15,829,Medium,High,Medium,Naive Bayes
+Classification,Small,10,1886,Medium,Medium,High,KNN
+Classification,Medium,10,4889,High,Medium,Low,SVM
+Classification,Small,10,1411,Medium,High,High,Logistic Regression
+Classification,Small,8,1041,Medium,Medium,High,KNN
+Classification,Small,6,1701,Medium,Medium,High,KNN
+Classification,Medium,20,9592,High,Medium,Low,SVM
+Classification,Small,5,364,High,High,High,Decision Tree
+Classification,Small,15,3953,High,High,Medium,Naive Bayes
+Classification,Medium,9,5144,High,High,High,Logistic Regression
+Classification,Large,22,58469,High,Low,Medium,Random Forest
+Classification,Small,18,1875,High,Medium,Low,SVM
+Classification,Small,8,1112,Medium,Medium,High,KNN
+Regression,Small,13,2487,Medium,High,High,Linear Regression
+Classification,Small,10,431,High,High,High,Decision Tree
+Classification,Large,38,41319,High,Low,Low,Random Forest
+Clustering,Medium,8,7375,Medium,Medium,Medium,K-Means
+Classification,Medium,18,8946,High,Medium,Medium,Random Forest
+Classification,Small,5,4379,Medium,High,Medium,Naive Bayes
+Classification,Large,32,20851,High,Medium,Low,Random Forest
+Classification,Small,8,4945,High,High,Medium,Naive Bayes
+Classification,Medium,19,5698,Medium,High,High,Decision Tree
+Classification,Small,6,4224,High,High,Medium,Naive Bayes
+Classification,Small,4,1802,Medium,Medium,High,KNN
+Classification,Medium,8,4188,Medium,High,High,Logistic Regression
+Classification,Small,13,4011,Medium,High,Medium,Naive Bayes
+Classification,Small,11,4973,Medium,High,Medium,Naive Bayes
+Clustering,Medium,10,5330,Medium,Medium,Medium,K-Means
+Regression,Medium,11,9209,High,High,High,Linear Regression
+Classification,Medium,7,6450,High,High,High,Logistic Regression
+Regression,Medium,6,7526,Medium,High,High,Linear Regression
+Classification,Small,11,1586,Medium,High,High,Logistic Regression
+Classification,Small,10,692,Medium,High,High,Decision Tree
+Classification,Small,2,938,Medium,Medium,High,KNN
+Classification,Medium,9,2772,Medium,High,High,Decision Tree
+Classification,Small,9,1010,Medium,High,Medium,Naive Bayes
+Classification,Large,15,54522,High,Medium,Medium,Random Forest
+Classification,Small,6,1223,Medium,Medium,High,KNN
+Regression,Medium,2,3893,High,High,High,Linear Regression
+Classification,Small,6,1165,Medium,High,High,Logistic Regression
+Classification,Medium,10,8427,High,High,High,Decision Tree
+Regression,Medium,9,8582,Medium,High,High,Linear Regression
+Classification,Medium,20,2802,Medium,High,High,Decision Tree
+Classification,Medium,28,6114,High,Medium,Low,SVM
+Regression,Small,9,1631,Medium,High,High,Linear Regression
+Classification,Small,15,1791,High,High,High,Decision Tree
+Classification,Small,6,2133,Medium,High,Medium,Naive Bayes
+Clustering,Medium,17,8700,Medium,High,Medium,K-Means
+Classification,Medium,50,8257,High,Low,Medium,Random Forest
+Classification,Medium,12,6848,High,Medium,Low,SVM
+Classification,Small,9,907,Medium,High,High,Decision Tree
+Classification,Small,5,4875,Medium,High,Medium,Naive Bayes
+Clustering,Medium,7,8039,Medium,High,Medium,K-Means
+Regression,Small,3,1288,High,High,High,Linear Regression
+Clustering,Medium,4,6750,Medium,Medium,Medium,K-Means
+Classification,Small,16,1294,High,High,High,Decision Tree
+Classification,Small,10,1626,Medium,Medium,High,KNN
+Classification,Small,8,2793,High,High,High,Logistic Regression
+Classification,Small,20,771,Medium,High,High,Decision Tree
+Classification,Large,31,25695,High,Low,Medium,Random Forest
+Classification,Small,10,1632,Medium,Medium,High,KNN
+Classification,Small,13,2241,High,Low,Low,SVM
+Classification,Small,28,1587,High,Low,Low,SVM
+Classification,Medium,15,7065,High,High,High,Logistic Regression
+Clustering,Large,24,74510,Medium,Medium,Medium,K-Means
+Clustering,Large,5,76433,Medium,High,Medium,K-Means
+Classification,Medium,13,11346,High,High,High,Logistic Regression
+Classification,Large,20,92357,High,Low,Low,Random Forest
+Classification,Medium,44,11216,High,Low,Medium,Random Forest
+Classification,Small,5,1158,High,High,High,Decision Tree
+Regression,Small,14,2440,High,High,High,Linear Regression
+Classification,Small,9,3253,High,High,Medium,Naive Bayes
+Classification,Large,23,52325,High,Low,Low,Random Forest
+Classification,Small,9,516,Medium,Medium,High,KNN
+Classification,Medium,3,4512,High,High,High,Logistic Regression
+Clustering,Large,28,87102,Medium,Medium,Medium,K-Means
+Classification,Small,9,722,Medium,High,Medium,Naive Bayes
+Regression,Small,7,1034,High,High,High,Linear Regression
+Clustering,Large,4,93385,Medium,Medium,Medium,K-Means
+Classification,Medium,12,4638,Medium,High,High,Logistic Regression
+Classification,Small,20,424,High,High,High,Decision Tree
+Classification,Small,17,2446,High,Low,Low,SVM
+Classification,Small,15,420,Medium,High,High,Decision Tree
+Regression,Small,12,2310,Medium,High,High,Linear Regression
+Classification,Small,9,1252,Medium,Medium,High,KNN
+Regression,Small,11,1464,High,High,High,Linear Regression
+Regression,Medium,8,8419,High,High,High,Linear Regression
+Clustering,Medium,22,12975,Medium,Medium,Medium,K-Means
+Clustering,Large,24,92832,Medium,High,Medium,K-Means
+Classification,Small,4,1191,Medium,Medium,High,KNN
+Classification,Small,15,545,Medium,High,High,Decision Tree
+Classification,Small,5,1843,Medium,High,High,Decision Tree
+Classification,Medium,7,4137,High,High,High,Logistic Regression
+Classification,Large,50,21504,High,Medium,Low,Random Forest
+Classification,Small,5,1518,Medium,High,High,Decision Tree
+Regression,Small,4,911,High,High,High,Linear Regression
+Classification,Small,2,1011,Medium,Medium,High,KNN
+Clustering,Large,15,22104,Medium,Medium,Medium,K-Means
+Regression,Medium,5,9625,Medium,High,High,Linear Regression
+Regression,Small,3,1088,High,High,High,Linear Regression
+Classification,Small,10,2297,High,High,Medium,Naive Bayes
+Classification,Small,19,787,High,High,High,Decision Tree
+Classification,Small,5,508,Medium,Medium,High,KNN
+Clustering,Medium,20,10141,Medium,High,Medium,K-Means
+Classification,Medium,21,13935,High,Medium,Low,Random Forest
+Classification,Medium,12,5465,High,High,High,Decision Tree
+Classification,Small,14,2599,High,High,Medium,Naive Bayes
+Classification,Small,9,4478,Medium,High,Medium,Naive Bayes
+Classification,Small,3,1892,Medium,Medium,High,KNN
+Classification,Medium,24,10244,High,Low,Low,SVM
+Classification,Small,16,2222,High,Medium,Low,SVM
+Classification,Medium,26,10939,High,Low,Low,SVM
+Classification,Small,3,1291,High,High,High,Logistic Regression
+Regression,Small,8,2314,Medium,High,High,Linear Regression
+Classification,Small,13,1572,Medium,High,High,Logistic Regression
+Clustering,Medium,10,13240,Medium,Medium,Medium,K-Means
+Clustering,Medium,7,3043,Medium,High,Medium,K-Means
+Classification,Small,4,3898,High,High,Medium,Naive Bayes
+Clustering,Large,5,99896,Medium,Medium,Medium,K-Means
+Classification,Large,19,70432,High,Low,Low,Random Forest
+Regression,Medium,12,9046,High,High,High,Linear Regression
+Classification,Small,13,1581,High,High,High,Logistic Regression
+Classification,Small,16,1103,High,Low,Low,SVM
+Classification,Large,18,50021,High,Medium,Low,Random Forest
+Classification,Small,29,2279,High,Medium,Low,SVM
+Classification,Small,5,1836,Medium,Medium,High,KNN
+Classification,Medium,16,10043,High,Medium,Low,SVM
