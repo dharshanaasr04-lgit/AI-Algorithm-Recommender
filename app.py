@@ -4,7 +4,7 @@ import joblib
 
 
 # ============================================================
-# 1. PAGE CONFIGURATION
+# PAGE CONFIGURATION
 # ============================================================
 
 st.set_page_config(
@@ -15,125 +15,7 @@ st.set_page_config(
 
 
 # ============================================================
-# 2. LOAD TRAINED MODEL
-# ============================================================
-
-@st.cache_resource
-def load_model():
-
-    model_data = joblib.load(
-        "ai/algorithm_recommender.pkl"
-    )
-
-    return (
-        model_data["model"],
-        model_data["encoder"],
-        model_data["feature_columns"]
-    )
-
-
-model, encoder, feature_columns = load_model()
-
-
-# ============================================================
-# 3. ALGORITHM INFORMATION
-# ============================================================
-
-algorithm_info = {
-
-    "Random Forest": {
-        "description":
-            "An ensemble learning algorithm that combines "
-            "multiple decision trees. It is useful for complex "
-            "classification and regression datasets.",
-
-        "type": "Supervised Learning",
-
-        "best_for":
-            "Large and complex datasets with many features."
-    },
-
-    "Decision Tree": {
-        "description":
-            "A tree-based algorithm that makes decisions using "
-            "a sequence of simple rules.",
-
-        "type": "Supervised Learning",
-
-        "best_for":
-            "Problems where interpretability is important."
-    },
-
-    "Logistic Regression": {
-        "description":
-            "A simple and efficient classification algorithm "
-            "used to predict categorical outcomes.",
-
-        "type": "Supervised Learning",
-
-        "best_for":
-            "Simple classification problems."
-    },
-
-    "SVM": {
-        "description":
-            "Support Vector Machine finds an effective decision "
-            "boundary between classes.",
-
-        "type": "Supervised Learning",
-
-        "best_for":
-            "High-dimensional classification problems."
-    },
-
-    "Naive Bayes": {
-        "description":
-            "A probabilistic algorithm based on Bayes' theorem. "
-            "It is fast and works well with smaller datasets.",
-
-        "type": "Supervised Learning",
-
-        "best_for":
-            "Text classification and smaller datasets."
-    },
-
-    "KNN": {
-        "description":
-            "K-Nearest Neighbors predicts a result based on "
-            "similar nearby data points.",
-
-        "type": "Supervised Learning",
-
-        "best_for":
-            "Small datasets where similar examples are useful."
-    },
-
-    "Linear Regression": {
-        "description":
-            "A regression algorithm used to predict numerical "
-            "values based on relationships between variables.",
-
-        "type": "Supervised Learning",
-
-        "best_for":
-            "Numerical prediction and regression problems."
-    },
-
-    "K-Means": {
-        "description":
-            "An unsupervised clustering algorithm that groups "
-            "similar data points into clusters.",
-
-        "type": "Unsupervised Learning",
-
-        "best_for":
-            "Finding natural groups in unlabeled data."
-    }
-}
-
-
-# ============================================================
-# 4. CUSTOM CSS
+# CUSTOM CSS
 # ============================================================
 
 st.markdown(
@@ -141,49 +23,37 @@ st.markdown(
     <style>
 
     .main-title {
-        font-size: 42px;
-        font-weight: 700;
         text-align: center;
+        font-size: 48px;
+        font-weight: 700;
         margin-bottom: 5px;
     }
 
     .subtitle {
         text-align: center;
-        font-size: 18px;
-        margin-bottom: 30px;
+        font-size: 20px;
+        margin-bottom: 35px;
     }
 
-    .recommendation-card {
-        padding: 25px;
-        border-radius: 15px;
-        border: 1px solid #dddddd;
-        margin-top: 20px;
-        text-align: center;
-    }
-
-    .algorithm-name {
-        font-size: 32px;
-        font-weight: 700;
-        margin: 10px;
-    }
-
-    .confidence {
-        font-size: 22px;
+    .recommendation-box {
+        padding: 18px;
+        border-radius: 10px;
+        background-color: #e8f8ee;
+        border: 1px solid #b7e4c7;
+        font-size: 20px;
         font-weight: 600;
     }
 
-    .section-title {
-        font-size: 25px;
-        font-weight: 650;
-        margin-top: 20px;
-        margin-bottom: 15px;
+    .confidence {
+        font-size: 30px;
+        font-weight: 600;
     }
 
-    .info-box {
+    .description-box {
         padding: 18px;
-        border-radius: 12px;
-        border: 1px solid #dddddd;
-        margin-bottom: 12px;
+        border-radius: 10px;
+        background-color: #e8f1ff;
+        border: 1px solid #c7dbff;
     }
 
     </style>
@@ -193,7 +63,126 @@ st.markdown(
 
 
 # ============================================================
-# 5. HEADER
+# LOAD TRAINED MODEL
+# ============================================================
+
+@st.cache_resource
+def load_model():
+
+    model_data = joblib.load(
+        "ai/algorithm_recommender.pkl"
+    )
+
+    model = model_data["model"]
+    encoder = model_data["encoder"]
+    feature_columns = model_data["feature_columns"]
+
+    return model, encoder, feature_columns
+
+
+try:
+
+    model, encoder, feature_columns = load_model()
+
+except Exception as e:
+
+    st.error("Unable to load the trained AI model.")
+
+    st.code(str(e))
+
+    st.stop()
+
+
+# ============================================================
+# ALGORITHM INFORMATION
+# ============================================================
+
+algorithm_info = {
+
+    "Random Forest": {
+        "description":
+            "An ensemble learning algorithm that combines "
+            "multiple decision trees. It is useful for "
+            "classification problems with complex datasets."
+    },
+
+    "Decision Tree": {
+        "description":
+            "A tree-based algorithm that makes decisions "
+            "using a sequence of simple rules. It is easy "
+            "to understand and interpret."
+    },
+
+    "Logistic Regression": {
+        "description":
+            "A simple and efficient classification algorithm "
+            "that works well for many binary and multiclass "
+            "classification problems."
+    },
+
+    "SVM": {
+        "description":
+            "Support Vector Machine finds an effective "
+            "decision boundary between classes and can "
+            "work well with high-dimensional data."
+    },
+
+    "Naive Bayes": {
+        "description":
+            "A probabilistic algorithm based on Bayes' theorem. "
+            "It is fast and can work well with smaller datasets."
+    },
+
+    "KNN": {
+        "description":
+            "K-Nearest Neighbors predicts a result based on "
+            "the most similar nearby data points."
+    },
+
+    "Linear Regression": {
+        "description":
+            "A regression algorithm used to predict a numerical "
+            "value based on relationships between variables."
+    },
+
+    "K-Means": {
+        "description":
+            "An unsupervised clustering algorithm that groups "
+            "similar data points into clusters."
+    }
+}
+
+
+# ============================================================
+# SIDEBAR
+# ============================================================
+
+with st.sidebar:
+
+    st.header("📌 About")
+
+    st.write(
+        "This application uses a trained machine learning "
+        "model to recommend a suitable algorithm based on "
+        "your project requirements."
+    )
+
+    st.divider()
+
+    st.header("🤖 Algorithms")
+
+    st.write("• Random Forest")
+    st.write("• Decision Tree")
+    st.write("• Logistic Regression")
+    st.write("• SVM")
+    st.write("• Naive Bayes")
+    st.write("• KNN")
+    st.write("• Linear Regression")
+    st.write("• K-Means")
+
+
+# ============================================================
+# HEADER
 # ============================================================
 
 st.markdown(
@@ -212,51 +201,22 @@ st.divider()
 
 
 # ============================================================
-# 6. SIDEBAR
+# PROJECT DETAILS
 # ============================================================
 
-with st.sidebar:
-
-    st.header("📌 About")
-
-    st.write(
-        "This application uses a trained machine learning "
-        "model to recommend a suitable algorithm based on "
-        "your project requirements."
-    )
-
-    st.divider()
-
-    st.subheader("🤖 Algorithms")
-
-    st.write("• Random Forest")
-    st.write("• Decision Tree")
-    st.write("• Logistic Regression")
-    st.write("• SVM")
-    st.write("• Naive Bayes")
-    st.write("• KNN")
-    st.write("• Linear Regression")
-    st.write("• K-Means")
-
-    st.divider()
-
-    st.caption(
-        "AI Algorithm Recommender\n\n"
-        "B.Sc. Information Technology Project"
-    )
+st.header("📊 Project Details")
 
 
 # ============================================================
-# 7. PROJECT DETAILS
+# INPUT SECTION
 # ============================================================
-
-st.markdown(
-    '<div class="section-title">📊 Project Details</div>',
-    unsafe_allow_html=True
-)
 
 col1, col2 = st.columns(2)
 
+
+# ------------------------------------------------------------
+# COLUMN 1
+# ------------------------------------------------------------
 
 with col1:
 
@@ -278,20 +238,41 @@ with col1:
         ]
     )
 
-    num_features = st.number_input(
+    num_features = st.selectbox(
         "Number of Features",
-        min_value=1,
-        value=10,
-        step=1
+        [
+            3,
+            5,
+            8,
+            10,
+            15,
+            20,
+            25,
+            30,
+            40,
+            50
+        ],
+        index=3
     )
 
-    num_records = st.number_input(
+    num_records = st.selectbox(
         "Number of Records",
-        min_value=1,
-        value=1000,
-        step=1
+        [
+            500,
+            1000,
+            5000,
+            10000,
+            20000,
+            50000,
+            100000
+        ],
+        index=1
     )
 
+
+# ------------------------------------------------------------
+# COLUMN 2
+# ------------------------------------------------------------
 
 with col2:
 
@@ -323,12 +304,11 @@ with col2:
     )
 
 
+# ============================================================
+# RECOMMENDATION BUTTON
+# ============================================================
+
 st.write("")
-
-
-# ============================================================
-# 8. RECOMMENDATION BUTTON
-# ============================================================
 
 recommend_button = st.button(
     "🔍 Recommend Algorithm",
@@ -337,30 +317,36 @@ recommend_button = st.button(
 
 
 # ============================================================
-# 9. AI PREDICTION
+# PREDICTION
 # ============================================================
 
 if recommend_button:
 
     # --------------------------------------------------------
-    # Create input dataframe
+    # Create user input DataFrame
     # --------------------------------------------------------
 
-    user_data = pd.DataFrame([
-        {
-            "problem_type": problem_type,
-            "dataset_size": dataset_size,
-            "num_features": num_features,
-            "num_records": num_records,
-            "accuracy_priority": accuracy_priority,
-            "speed_priority": speed_priority,
-            "interpretability": interpretability
-        }
-    ])
+    user_data = pd.DataFrame({
+
+        "problem_type": [problem_type],
+
+        "dataset_size": [dataset_size],
+
+        "num_features": [num_features],
+
+        "num_records": [num_records],
+
+        "accuracy_priority": [accuracy_priority],
+
+        "speed_priority": [speed_priority],
+
+        "interpretability": [interpretability]
+
+    })
 
 
     # --------------------------------------------------------
-    # Feature columns
+    # Categorical and numerical columns
     # --------------------------------------------------------
 
     categorical_columns = [
@@ -381,235 +367,191 @@ if recommend_button:
     # Encode categorical features
     # --------------------------------------------------------
 
-    encoded_data = encoder.transform(
-        user_data[categorical_columns]
-    )
+    try:
 
-
-    encoded_df = pd.DataFrame(
-        encoded_data,
-        columns=encoder.get_feature_names_out(
-            categorical_columns
+        encoded_data = encoder.transform(
+            user_data[categorical_columns]
         )
-    )
 
-
-    # --------------------------------------------------------
-    # Combine features
-    # --------------------------------------------------------
-
-    processed_input = pd.concat(
-        [
-            user_data[numerical_columns].reset_index(
-                drop=True
-            ),
-
-            encoded_df.reset_index(
-                drop=True
+        encoded_df = pd.DataFrame(
+            encoded_data,
+            columns=encoder.get_feature_names_out(
+                categorical_columns
             )
-        ],
-        axis=1
-    )
+        )
 
 
-    # --------------------------------------------------------
-    # Match training feature order
-    # --------------------------------------------------------
+        # ----------------------------------------------------
+        # Combine numerical + encoded features
+        # ----------------------------------------------------
 
-    processed_input = processed_input.reindex(
-        columns=feature_columns,
-        fill_value=0
-    )
+        processed_input = pd.concat(
+            [
+                user_data[numerical_columns]
+                .reset_index(drop=True),
 
-
-    # --------------------------------------------------------
-    # Predict
-    # --------------------------------------------------------
-
-    prediction = model.predict(
-        processed_input
-    )
-
-    recommended_algorithm = prediction[0]
+                encoded_df
+                .reset_index(drop=True)
+            ],
+            axis=1
+        )
 
 
-    # --------------------------------------------------------
-    # Confidence
-    # --------------------------------------------------------
+        # ----------------------------------------------------
+        # Match training feature order
+        # ----------------------------------------------------
 
-    probabilities = model.predict_proba(
-        processed_input
-    )[0]
-
-    confidence = max(probabilities) * 100
-
-
-    # --------------------------------------------------------
-    # Algorithm details
-    # --------------------------------------------------------
-
-    info = algorithm_info[
-        recommended_algorithm
-    ]
+        processed_input = processed_input.reindex(
+            columns=feature_columns,
+            fill_value=0
+        )
 
 
-    # ========================================================
-    # 10. RESULT
-    # ========================================================
+        # ----------------------------------------------------
+        # Predict algorithm
+        # ----------------------------------------------------
 
-    st.divider()
+        prediction = model.predict(
+            processed_input
+        )
 
-    st.markdown(
-        '<div class="section-title">🎯 AI Recommendation</div>',
-        unsafe_allow_html=True
-    )
+        recommended_algorithm = prediction[0]
 
 
-    st.markdown(
-        f"""
-        <div class="recommendation-card">
+        # ----------------------------------------------------
+        # Calculate confidence
+        # ----------------------------------------------------
 
-            <div>Recommended Algorithm</div>
+        if hasattr(model, "predict_proba"):
 
-            <div class="algorithm-name">
-                {recommended_algorithm}
+            probabilities = model.predict_proba(
+                processed_input
+            )[0]
+
+            confidence = max(probabilities) * 100
+
+        else:
+
+            confidence = 0
+
+
+        # ----------------------------------------------------
+        # Get description
+        # ----------------------------------------------------
+
+        description = algorithm_info.get(
+            recommended_algorithm,
+            {
+                "description":
+                "This algorithm is recommended based "
+                "on the characteristics of your project."
+            }
+        )["description"]
+
+
+        # ====================================================
+        # DISPLAY RESULT
+        # ====================================================
+
+        st.divider()
+
+        st.header("🎯 AI Recommendation")
+
+
+        # ----------------------------------------------------
+        # Recommended Algorithm
+        # ----------------------------------------------------
+
+        st.markdown(
+            f"""
+            <div class="recommendation-box">
+                Recommended Algorithm: {recommended_algorithm}
             </div>
+            """,
+            unsafe_allow_html=True
+        )
 
-            <div class="confidence">
-                Model Confidence: {confidence:.2f}%
+
+        # ----------------------------------------------------
+        # Confidence
+        # ----------------------------------------------------
+
+        st.subheader("Model Confidence")
+
+        st.markdown(
+            f'<div class="confidence">{confidence:.2f}%</div>',
+            unsafe_allow_html=True
+        )
+
+
+        # ----------------------------------------------------
+        # Why recommendation?
+        # ----------------------------------------------------
+
+        st.subheader("💡 Why this recommendation?")
+
+        st.write(
+            f"✓ Problem Type: **{problem_type}**"
+        )
+
+        st.write(
+            f"✓ Dataset Size: **{dataset_size}**"
+        )
+
+        st.write(
+            f"✓ Number of Features: **{num_features}**"
+        )
+
+        st.write(
+            f"✓ Number of Records: **{num_records}**"
+        )
+
+        st.write(
+            f"✓ Accuracy Priority: **{accuracy_priority}**"
+        )
+
+        st.write(
+            f"✓ Speed Priority: **{speed_priority}**"
+        )
+
+        st.write(
+            f"✓ Interpretability: **{interpretability}**"
+        )
+
+
+        # ----------------------------------------------------
+        # Algorithm Description
+        # ----------------------------------------------------
+
+        st.subheader("📚 Algorithm Description")
+
+        st.markdown(
+            f"""
+            <div class="description-box">
+                {description}
             </div>
-
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
-
-    # --------------------------------------------------------
-    # Confidence progress
-    # --------------------------------------------------------
-
-    st.write("")
-
-    st.progress(
-        min(int(confidence), 100)
-    )
-
-
-    # ========================================================
-    # 11. WHY THIS RECOMMENDATION?
-    # ========================================================
-
-    st.markdown(
-        '<div class="section-title">💡 Why this recommendation?</div>',
-        unsafe_allow_html=True
-    )
-
-
-    reason_col1, reason_col2 = st.columns(2)
-
-
-    with reason_col1:
-
-        st.write(
-            f"✓ **Problem Type:** {problem_type}"
-        )
-
-        st.write(
-            f"✓ **Dataset Size:** {dataset_size}"
-        )
-
-        st.write(
-            f"✓ **Number of Features:** {num_features}"
-        )
-
-        st.write(
-            f"✓ **Number of Records:** {num_records}"
+            """,
+            unsafe_allow_html=True
         )
 
 
-    with reason_col2:
+    except Exception as e:
 
-        st.write(
-            f"✓ **Accuracy Priority:** {accuracy_priority}"
+        st.error(
+            "An error occurred while generating "
+            "the recommendation."
         )
 
-        st.write(
-            f"✓ **Speed Priority:** {speed_priority}"
-        )
-
-        st.write(
-            f"✓ **Interpretability:** {interpretability}"
-        )
-
-        st.write(
-            f"✓ **Learning Type:** {info['type']}"
-        )
-
-
-    # ========================================================
-    # 12. ALGORITHM DESCRIPTION
-    # ========================================================
-
-    st.markdown(
-        '<div class="section-title">📚 Algorithm Description</div>',
-        unsafe_allow_html=True
-    )
-
-
-    st.info(
-        info["description"]
-    )
-
-
-    st.markdown(
-        f"**Best suited for:** {info['best_for']}"
-    )
+        st.code(str(e))
 
 
 # ============================================================
-# 13. ALGORITHM GUIDE
-# ============================================================
-
-st.divider()
-
-st.markdown(
-    '<div class="section-title">📖 Algorithm Guide</div>',
-    unsafe_allow_html=True
-)
-
-st.write(
-    "Learn about the algorithms supported by this system."
-)
-
-
-for algorithm, info in algorithm_info.items():
-
-    with st.expander(
-        f"🤖 {algorithm}"
-    ):
-
-        st.write(
-            f"**Type:** {info['type']}"
-        )
-
-        st.write(
-            f"**Description:** {info['description']}"
-        )
-
-        st.write(
-            f"**Best suited for:** {info['best_for']}"
-        )
-
-
-# ============================================================
-# 14. FOOTER
+# FOOTER
 # ============================================================
 
 st.divider()
 
 st.caption(
     "AI Algorithm Recommender | "
-    "Machine Learning Project | "
-    "Built with Python, Pandas, Scikit-learn and Streamlit"
+    "Machine Learning Project"
 )
